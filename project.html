@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Project</title>
+    <style>
+        /* structure */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            height: 2000px; 
+        }
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #6d1348;
+        }
+
+        h2 { margin-top: 0; }
+
+        /* sticky navagation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #614f5e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+     
+        }
+
+        /* float */
+        .float-container {
+            background-color: #f4f4f4;
+            padding: 10px;
+            overflow: auto; 
+        }
+        .float-box {
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: #f389e1;
+            margin-right: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* relative and absolute */
+        .relative-container {
+            position: relative;
+            width: 80%;
+            height: 300px;
+            background-color: #f7bed9;
+            margin: 20px auto;
+            border: 2px solid #e46ebd;
+        }
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: #fcaceb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* fixed box */
+        .fixed-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: #f389e1;
+             align-items: center;
+             display: flex;
+          justify-content: center;
+            font-weight: bold;
+      
+           
+        }
+    </style>
+</head>
+<body>
+
+    <!-- sticky navigation -->
+    <div class="navbar">
+        Sticky Navbar (Top)
+    </div>
+
+    <section>
+        <h2>1. Float Property</h2>
+        <div class="float-container">
+            <div class="float-box">Floated Box</div>
+            <p>This is a paragraph that wraps around the floated box.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Relative and Absolute Positioning</h2>
+        <div class="relative-container">
+            <p>This is relative container (position: relative).</p>
+            <div class="absolute-box">Absolute</div>
+            <p>The green box is completely in the container and placed 20px from the top and right.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Fixed Positioning</h2>
+        <p> When you scroll down the yellow box stay in the same place. </p>
+    </section>
+
+    <!-- fixed box -->
+    <div class="fixed-box">
+        Fixed Box
+    </div>
+
+</body>
+</html>
